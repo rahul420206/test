@@ -499,9 +499,9 @@ Before you start following the guidelines, make sure to go through the [prerequi
 
     -> Now go to the Effort Sheet and choose a name(Ex: PK). Open Phpmyadmin and go to users table. Find the team member you added as team member(Ex; Admin) and give him the nick name of the person you chose from the Effort Sheet(Ex: PK)
 
-    -> Go to employees table, add rows with exact id and name from the users table(Don't use nick name). Save them
+    -> Go to employees table, add/edit rows with exact id and name from the users table(Don't use nick name). Save them
 
-    -> Now again go to portal site and select your project, click on the Sync button. Now you should see the Team member you added in the Team members column.
+    -> Now again go to portal site and select your project, click on the Sync button. Now you should see the Team member added in the Team Members table.
 
     <img width="1440" alt="Screenshot (3135)" src="https://github.com/rahul420206/test/blob/main/Screenshot%20(3135).png">
 
