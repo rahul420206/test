@@ -449,8 +449,15 @@ Before you start following the guidelines, make sure to go through the [prerequi
     8. Go to keys and click on add key button and select Create New Key option.
         <img src="https://github.com/ColoredCow/portal/blob/update_installation/public/images/createKey.jpeg">
     9. A JSON file will be downloaded when you create credentials and key, move that JSON file to the `/portal/public/` folder inside the project.
+   
+    10. You have to create a OAuth 2.0 Client ID to get your Client ID and Client Secret
+        -> For this Click on Create Credentials and select OAuth Client ID
+        -> You may need to first configure your consent screen. Click on Configure Consent Screen. Select your User Type as External, click on create
+        -> In the App information give any name and your user email. In the Authorized domains click on add domain and fill it with "auth0.com" and again give your email in Developer Contact Information.
+        -> Click save on the next step and in the Test users step provide your email, click on save. Now you have configured. Now go to Credentials to create OAuth Client 2.0 ID
+        -> Select your Application Type as Web and name as anything(Ex: Client). CLick on save and now you will get both Google Client ID and Client Secret
 
-    10. Open the .env file and add the following  
+    12. Open the .env file and add the following  
 
         ```sh
         GOOGLE_CLIENT_ID= #Copy it from the credentials(OAuth 2 Client ID)
@@ -465,18 +472,27 @@ Before you start following the guidelines, make sure to go through the [prerequi
         ```
         ``Note`` Add double backward slash ``\\`` while adding the file path because single backward slash is considered as escape sequence
 
-    11. Copy the Email from the Service Accounts details
+    13. Copy the Email from the Service Accounts details
         <img width="1440" alt="Screenshot 2024-04-09 at 10 59 51 PM" src="https://github.com/ColoredCow/portal/assets/68751333/acde29bc-f46f-4d4f-ab6a-d7b055e414ab">
 
-    12. Add the email by clicking on the share button
+    14. Add the email by clicking on the share button
         <img width="1440" alt="Screenshot 2024-04-09 at 11 02 35 PM" src="https://github.com/ColoredCow/portal/assets/68751333/89d80c7d-f176-42f8-aed8-5c3696f97d9d">
 
-    13. Run the command php artisan config:cache
+    15. Run the command php artisan config:cache
 
-    14. Open the ColoredCow portal http://portal.test/login/
+    16. Open the ColoredCow portal http://portal.test/login/
 
-    15. Go to CRM->Projects and select any of the projects.
+    17. Go to CRM->Projects and select any of the projects.
 
-    16. After opening the project click on edit button and enter the Effortsheet URL then, click on Save button.
+    18. After opening the project click on edit button and enter the Effortsheet URL then, click on Save button.
 
-    17. Go to phpmyadmin, open users table and change the nicknames of users as team member names in effortsheet.
+    19. Go to phpmyadmin, open users table and change the nicknames of users as team member names in effortsheet.
+   
+16. Testing:
+    -> To test if the Effort Sheet and the Portal application has synced, Go to CRM->Projects->select a project, click on edit and add a team member(Ex: Admin), designation of your choice in the drop down lists and give a random number in the Expected Efforts In Hours. Click on save
+
+    -> Now go to the Effort Sheet and choose a name(Ex: PK). Open Phpmyadmin and go to users table. Find the team member you added as team member(Ex; Admin) and give him the nick name of the person you chose from the Effort Sheet(Ex: PK)
+
+    -> Go to employees table, add rows with exact id and name from the users table(Don't use nick name). Save them
+
+    -> Now again go to portal site and select your project, click on the Sync button. Now you should see the Team member you added in the Team members column.
