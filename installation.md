@@ -502,3 +502,6 @@ Before you start following the guidelines, make sure to go through the [prerequi
     -> Go to employees table, add rows with exact id and name from the users table(Don't use nick name). Save them
 
     -> Now again go to portal site and select your project, click on the Sync button. Now you should see the Team member you added in the Team members column.
+
+    <img width="1440" alt="Screenshot (3135)" src="https://github.com/rahul420206/test/blob/main/Screenshot%20(3135).png">
+
