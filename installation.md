@@ -451,10 +451,15 @@ Before you start following the guidelines, make sure to go through the [prerequi
     9. A JSON file will be downloaded when you create credentials and key, move that JSON file to the `/portal/public/` folder inside the project.
    
     10. You have to create a OAuth 2.0 Client ID to get your Client ID and Client Secret
+
         -> For this Click on Create Credentials and select OAuth Client ID
+
         -> You may need to first configure your consent screen. Click on Configure Consent Screen. Select your User Type as External, click on create
+
         -> In the App information give any name and your user email. In the Authorized domains click on add domain and fill it with "auth0.com" and again give your email in Developer Contact Information.
+
         -> Click save on the next step and in the Test users step provide your email, click on save. Now you have configured. Now go to Credentials to create OAuth Client 2.0 ID
+
         -> Select your Application Type as Web and name as anything(Ex: Client). CLick on save and now you will get both Google Client ID and Client Secret
 
     12. Open the .env file and add the following  
