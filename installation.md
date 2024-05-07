@@ -494,6 +494,7 @@ Before you start following the guidelines, make sure to go through the [prerequi
     19. Go to phpmyadmin, open users table and change the nicknames of users as team member names in effortsheet.
    
 16. Testing:
+
     -> To test if the Effort Sheet and the Portal application has synced, Go to CRM->Projects->select a project, click on edit and add a team member(Ex: Admin), designation of your choice in the drop down lists and give a random number in the Expected Efforts In Hours. Click on save
 
     -> Now go to the Effort Sheet and choose a name(Ex: PK). Open Phpmyadmin and go to users table. Find the team member you added as team member(Ex; Admin) and give him the nick name of the person you chose from the Effort Sheet(Ex: PK)
